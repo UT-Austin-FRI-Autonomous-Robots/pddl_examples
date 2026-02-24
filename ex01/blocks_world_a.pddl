@@ -1,0 +1,12 @@
+(define (problem blocks-world-a)
+	(:domain blocks-world)
+	(:objects block_a - block block_b - block block_c - block gripper_a - gripper table_a - table)
+	(:init
+		(on-table block_a table_a)
+		(on-table block_c table_a)
+		(stacked block_b block_a)
+		(empty gripper_a)
+		(clear block_b)
+		(clear block_c)
+	)
+	(:goal (and (in-gripper block_b gripper_a))))

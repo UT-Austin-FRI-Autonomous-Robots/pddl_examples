@@ -1,0 +1,16 @@
+(define (domain blocks-world)
+	(:requirements :typing)
+	(:types block gripper table)
+	(:predicates
+		(empty ?g - gripper)
+		(clear ?b - block)
+		(stacked ?a - block ?b - block)
+		(on-table ?a - block ?b - table)
+		(in-gripper ?b - block ?g - gripper)
+	)
+	(:action grasp
+		:parameters (?g - gripper ?b - block)
+		:precondition (and (clear ?b) (empty ?g))
+		:effect (and (not (clear ?b)) (not (empty ?g)) (in-gripper ?b ?g))
+	)
+)
