@@ -11,6 +11,9 @@
 	(:action grasp
 		:parameters (?g - gripper ?b - block)
 		:precondition (and (clear ?b) (empty ?g))
-		:effect (and (not (clear ?b)) (not (empty ?g)) (in-gripper ?b ?g))
+		:effect (and
+			(not (clear ?b))
+			(not (empty ?g))
+			(in-gripper ?b ?g))
 	)
 )

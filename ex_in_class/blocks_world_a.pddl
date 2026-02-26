@@ -15,7 +15,8 @@
 		(clear block_c)
 	)
 	(:goal (and
-		(in-gripper block_b gripper_a)
+		(stacked block_b block_c)
+		(stacked block_a block_b)
 		)
 	)
 )
